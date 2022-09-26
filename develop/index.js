@@ -34,14 +34,27 @@ inquirer
 		type: 'input',
 		name: 'usageInformation',
 		message: 'Usage Information:',
-	},	{
+	},
+	{
+		type: 'list',
+		name: 'license',
+		message: 'License Information:',
+		choices: ['Apache-2.0','MIT'],
+	},
+	{
 		type: 'input',
 		name: 'contributionGuidelines',
 		message: 'Contribution Guidelines:',
-	},	{
+	},	
+	{
 		type: 'input',
 		name: 'testInstructions',
 		message: 'Enter Instructions:',
+	},
+	{
+		type: 'input',
+		name: 'questions',
+		message: 'Questions:',
 	},
   ])
   .then(answers => {
@@ -51,17 +64,46 @@ console.log(answers.installInstructions);
 console.log(answers.usageInformation);
 console.log(answers.contributionGuidelines);
 console.log(answers.testInstructions); */
+
+if (answers.license) {
+	return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+} 
+else {
+	return `MIT`
+	}
+},
+
 writeToFile('README.md',`# ${answers.title}
 
-# ${answers.description}
+## Description
+${answers.description}
 
-# ${answers.installInstructions}
+## Table of Content
+[Description](#description)
+[Install Instructions](#install-instructions)
+[Usage Information](#usage-information)
+[License](#license)
+[Contribution Guidelines](#contribution-guidelines)
+[Test Instructions](#test-instructions)
+[Questions](#questions)
 
-# ${answers.usageInformation}
+## Install Instructions 
+${answers.installInstructions}
 
-# ${answers.contributionGuidelines}
+## Usage Information
+${answers.usageInformation}
 
-# ${answers.testInstructions}
+## License
+${answers.license}
+
+## Contribution Guidelines 
+${answers.contributionGuidelines}
+
+## Test Instructions
+${answers.testInstructions}
+
+## Questions
+${answers.questions}
 `);
 
   });
