@@ -24,11 +24,18 @@ Languages Used:
 - NodeJS
 - Inquirer
 
+Screenshot
+
+![README - Generator](https://user-images.githubusercontent.com/109932251/192936724-5990818e-6791-45f7-a384-5b46da0d200c.png)
+
+
+
+
 Tutorial Video
 https://drive.google.com/file/d/115HIMw67i8GmsfV66OBm2gPaQa0K3AIZ/view
 
-Screenshot
-![README - Generator](https://user-images.githubusercontent.com/109932251/192936724-5990818e-6791-45f7-a384-5b46da0d200c.png)
+
+
 
 Questions?
 If you have any further questions please contact me at deanna.dewitt14@gmail.com
