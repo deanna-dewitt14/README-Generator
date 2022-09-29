@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { inherits } = require('util');
+const generateMarkdown = require('./util/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = ['what is your favorite food?'];
@@ -40,7 +40,7 @@ inquirer
 		type: 'list',
 		name: 'license',
 		message: 'License Information:',
-		choices: ['Apache-2.0','MIT'],
+		choices: ['Apache-2.0','BSD 3','MIT'],
 	},
 	{
 		type: 'input',
@@ -59,6 +59,9 @@ inquirer
 	},
   ])
   .then(answers => {
+	  if (answers.license === 'None') {
+		  answers.liense = null;
+	  }
 /* console.log(answers.title);
 console.log(answers.description);
 console.log(answers.installInstructions);
@@ -66,38 +69,5 @@ console.log(answers.usageInformation);
 console.log(answers.contributionGuidelines);
 console.log(answers.testInstructions); */
 
-writeToFile('README.md',`# ${answers.title}
-
-## Description
-${answers.description}
-
-## Table of Content
-- [Description](#description)
-- [Install Instructions](#install-instructions)
-- [Usage Information](#usage-information)
-- [License](#license)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Test Instructions](#test-instructions)
-- [Questions](#questions)
-
-## Install Instructions 
-${answers.installInstructions}
-
-## Usage Information
-${answers.usageInformation}
-
-## License
-${answers.license}
-
-## Contribution Guidelines 
-${answers.contributionGuidelines}
-
-## Test Instructions
-${answers.testInstructions}
-
-## Questions
-${answers.email}
-${answers.github}
-`)
-
-})
+	writeToFile('README.md', generateMarkdown (answers.title))
+	})

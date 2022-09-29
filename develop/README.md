@@ -1,4 +1,4 @@
-# test
+# Test
 
 ## Description
 test
@@ -16,13 +16,13 @@ test
 test
 
 ## Usage Information
-tes
+test
 
 ## License
 Apache-2.0
 
 ## Contribution Guidelines 
-tes
+Test
 
 ## Test Instructions
 test
