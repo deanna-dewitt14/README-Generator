@@ -16,14 +16,11 @@ function renderLicenseLink(license) {
   if (license) {
     var licenseLink = '';
     switch (license) {
-      case 'APACHE 2.0':
-        licenseLink = 'Apache-2.0';
-        break;
-        case 'BSD 3':
-          licenseLink = 'BDS-3-Claue';
-        break;
+         case 'BSD 3':
+          licenseLink = 'BSD-3-Clause'/*[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)';
+        */break;
         default:
-          licenseLink = 'MIT';
+          licenseLink = 'MIT'/*'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'*/;
     }
     return 'https://opensource.org/licenses/${licenseLink}';
   } else {
@@ -78,7 +75,7 @@ function generateMarkdown(answers) {
 
   ## Questions
   ${answers.email}
-  ${answers.github}
+  ${answers.username}
 `;
 }
 

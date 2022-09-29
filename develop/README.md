@@ -1,32 +1,36 @@
-# Test
+# test
 
-## Description
-test
+  ![](https://img.shields.io/badge/license-BSD3-green)
 
-## Table of Content
-- [Description](#description)
-- [Install Instructions](#install-instructions)
-- [Usage Information](#usage-information)
-- [License](#license)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Test Instructions](#test-instructions)
-- [Questions](#questions)
+  ## Description
 
-## Install Instructions 
-test
+  test
 
-## Usage Information
-test
 
-## License
-Apache-2.0
+  ## Table of Content
+  - [Description](#description)
+  - [Install Instructions](#install-instructions)
+  - [Usage Information](#usage-information)
+  - [License](#license)
+  - [Contribution Guidelines](#contribution-guidelines)
+  - [Test Instructions](#test-instructions)
+  - [Questions](#questions)
 
-## Contribution Guidelines 
-Test
+  ## Install Instructions 
+  test
 
-## Test Instructions
-test
+  ## Usage Information
+  test
 
-## Questions
-undefined
-undefined
+  ## License
+  This license under the [BSD 3](https://opensource.org/licenses/${licenseLink}) license.
+
+  ## Contribution Guidelines 
+  test
+
+  ## Test Instructions
+  test
+
+  ## Questions
+  test
+  test

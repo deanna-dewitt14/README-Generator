@@ -1,10 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./util/generateMarkdown');
+const generateMarkdown = require('../develop/utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
-const questions = ['what is your favorite food?'];
+const questions = [];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -14,8 +14,9 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-inquirer
-  .prompt([
+function init(){
+	return inquirer
+  	.prompt([
     {
       type: 'input',
       name: 'title',
@@ -40,7 +41,7 @@ inquirer
 		type: 'list',
 		name: 'license',
 		message: 'License Information:',
-		choices: ['Apache-2.0','BSD 3','MIT'],
+		choices: ['BSD 3','MIT'],
 	},
 	{
 		type: 'input',
@@ -50,24 +51,26 @@ inquirer
 	{
 		type: 'input',
 		name: 'testInstructions',
-		message: 'Enter Instructions:',
+		message: 'Enter Testing Instructions:',
 	},
 	{
 		type: 'input',
-		name: 'questions',
-		message: 'Questions:',
+		name: 'username',
+		message: 'What is your GitHub username? ',
 	},
+	{
+		type: 'input',
+		name: 'email',
+		message: 'What is your email address?'
+	}
   ])
   .then(answers => {
-	  if (answers.license === 'None') {
-		  answers.liense = null;
-	  }
-/* console.log(answers.title);
-console.log(answers.description);
-console.log(answers.installInstructions);
-console.log(answers.usageInformation);
-console.log(answers.contributionGuidelines);
-console.log(answers.testInstructions); */
+	 if (answers.license === 'None') {
+		  answers.license = null;
+	  } 
 
-	writeToFile('README.md', generateMarkdown (answers.title))
-	})
+writeToFile('README.md', generateMarkdown(answers))
+  })
+}
+
+init();
