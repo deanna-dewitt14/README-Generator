@@ -5,7 +5,7 @@ This application will help you quickly generate a README.md file using the termi
 After downloading the repository open your terminal and make sure you are in the develop folder.
 Then input node index.js
 
-The program should give you the following questions.
+##The program should give you the following questions.
 
 1.What is your project title?
 
@@ -29,23 +29,23 @@ The program should give you the following questions.
 Once you have answered all these questions you should have created your very own README.md!
 
 
-Languages Used:
+##Languages Used:
 - JavaScript
 - NodeJS
 - Inquirer
 
-Screenshot
+##Screenshot
 
 ![README - Generator](https://user-images.githubusercontent.com/109932251/192936724-5990818e-6791-45f7-a384-5b46da0d200c.png)
 
 
 
 
-Tutorial Video
+##Tutorial Video
 https://drive.google.com/file/d/115HIMw67i8GmsfV66OBm2gPaQa0K3AIZ/view
 
 
 
 
-Questions?
+##Questions?
 If you have any further questions please contact me at deanna.dewitt14@gmail.com
