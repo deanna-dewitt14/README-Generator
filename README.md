@@ -1,30 +1,11 @@
 # README-Generator
 
+https://github.com/deanna-dewitt14/README-Generator
+
 This application will help you quickly generate a README.md file using the terminals command line. 
 
 After downloading the repository open your terminal and make sure you are in the develop folder.
-Then input node index.js
-
-##The program should give you the following questions.
-
-1.What is your project title?
-
-2.Enter a description of your project:
-
-3.Give a detailed descripion on how to install:
-
-4.Usage Information:
-
-5.License Information:
-
-6.Contribution Guidelines:
-
-7.Enter Testing Instructions:
-
-8.What is your GitHub username?
-
-9.What is your email address?
-
+Then input node index.js. The program should then give you a list of questions.
 
 Once you have answered all these questions you should have created your very own README.md!
 
