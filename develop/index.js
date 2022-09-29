@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { inherits } = require('util');
 
 // TODO: Create an array of questions for user input
 const questions = ['what is your favorite food?'];
@@ -65,27 +66,19 @@ console.log(answers.usageInformation);
 console.log(answers.contributionGuidelines);
 console.log(answers.testInstructions); */
 
-if (answers.license) {
-	return `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
-} 
-else {
-	return `MIT`
-	}
-},
-
 writeToFile('README.md',`# ${answers.title}
 
 ## Description
 ${answers.description}
 
 ## Table of Content
-[Description](#description)
-[Install Instructions](#install-instructions)
-[Usage Information](#usage-information)
-[License](#license)
-[Contribution Guidelines](#contribution-guidelines)
-[Test Instructions](#test-instructions)
-[Questions](#questions)
+- [Description](#description)
+- [Install Instructions](#install-instructions)
+- [Usage Information](#usage-information)
+- [License](#license)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Test Instructions](#test-instructions)
+- [Questions](#questions)
 
 ## Install Instructions 
 ${answers.installInstructions}
@@ -103,9 +96,8 @@ ${answers.contributionGuidelines}
 ${answers.testInstructions}
 
 ## Questions
-${answers.questions}
-`);
+${answers.email}
+${answers.github}
+`)
 
-  });
-
-
+})
